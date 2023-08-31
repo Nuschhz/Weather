@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+
+.container {
+  font-family: "Ubuntu", sans-serif;
+  background-color: rgb(44, 65, 101);
+  width: 100%;
+  height: calc(100vh - 70px);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerSmall {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 500px;
+  margin: 0 10px;
+}

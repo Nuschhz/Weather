@@ -1,0 +1,14 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(66, 87, 127);
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 5px;
+  outline: thin;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}

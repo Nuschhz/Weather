@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
+.input {
+  font-family: "Roboto Slab", serif;
+  font-size: 0.8em;
+  background-color: rgb(66, 87, 127);
+  color: white;
+  border: none;
+  height: 24px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 5px;
+}
+.input:focus {
+  outline: solid rgba(165, 198, 246, 0.8) 2px;
+}
+.input::placeholder {
+  color: white;
+}

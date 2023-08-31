@@ -1,0 +1,11 @@
+.containerS {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  width: 300px;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  background-color: rgb(51, 25, 92);
+}

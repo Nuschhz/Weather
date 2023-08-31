@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 600px;
+  width: 450px;
+  border-radius: 30px;
+  background-color: rgb(51, 25, 92);
+}
+.bottomContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}

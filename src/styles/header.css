@@ -1,0 +1,18 @@
+.header {
+  background-color: rgb(36, 46, 79);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70px;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+}
