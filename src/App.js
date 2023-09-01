@@ -3,15 +3,16 @@ import Header from "./components/Header";
 
 import "./hooks/useThemeContext";
 import { ThemeContext } from "./hooks/useThemeContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 function App() {
   const theme = useContext(ThemeContext);
+  const [textValue, setTextValue] = useState();
 
   return (
     <ThemeContext.Provider value={theme.light}>
-      <Header />
-      <Weather />
+      <Header text={textValue} updateText={setTextValue} />
+      <Weather city={textValue} />
     </ThemeContext.Provider>
   );
 }

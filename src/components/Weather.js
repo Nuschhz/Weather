@@ -7,9 +7,8 @@ import SmallCard from "./SmallCard";
 
 import { useGetWeather } from "../hooks/useGetWeather";
 
-function Weather() {
-  const [data] = useGetWeather();
-  console.log(data);
+function Weather({ city = "", unit = "" }) {
+  const [data] = useGetWeather(city, unit);
   return (
     <div>
       <div className="container">
@@ -24,11 +23,11 @@ function Weather() {
             />
             <div className="containerSmall">
               <div>
-                Ontem
+                Amanhã
                 <SmallCard />
               </div>
               <div>
-                Amanhã
+                Depois de Amanhã
                 <SmallCard />
               </div>
             </div>

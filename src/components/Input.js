@@ -2,21 +2,27 @@ import { useState } from "react";
 
 function Input({
   placeholder = "Placeholder",
-  value = "",
-  onChange = () => {},
   className = "",
+  updateText = () => {},
 }) {
-  const [textValue, setTextValue] = useState();
+  const [textvalue, setValue] = useState();
 
   const handleOnChange = (e) => {
-    setTextValue(e.target.value);
+    setValue(e.target.value);
+  };
+
+  const onEnter = (e) => {
+    if (e.keyCode === 13) {
+      updateText(e.target.value);
+    }
   };
 
   return (
     <input
       placeholder={placeholder}
-      value={textValue}
+      value={textvalue}
       onChange={(e) => handleOnChange(e)}
+      onKeyDown={(e) => onEnter(e)}
       className={className}
     />
   );

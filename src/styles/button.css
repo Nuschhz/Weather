@@ -7,8 +7,10 @@
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 5px;
-  outline: thin;
   width: fit-content;
   height: fit-content;
   cursor: pointer;
+}
+.button:focus {
+  outline: solid rgba(165, 198, 246, 0.8) 2px;
 }
