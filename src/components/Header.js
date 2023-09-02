@@ -2,10 +2,11 @@ import "../styles/header.css";
 import "../styles/input.css";
 import "../styles/button.css";
 
+import Moon from "../images/moon.png";
+
 import Button from "./Button";
 import Input from "./Input";
 import Switch from "./Switch";
-import ComboBox from "./ComboBox";
 
 import { IconSearch } from "@tabler/icons-react";
 
@@ -17,8 +18,7 @@ function Header({ updateText = () => {} }) {
   return (
     <header className="header">
       <div className="content">
-        <ComboBox />
-        <div className="inputContainer">
+        <div className="doublesContainer">
           <Input
             placeholder="Busque uma cidade..."
             className="input"
@@ -26,7 +26,10 @@ function Header({ updateText = () => {} }) {
           />
           <Button className="button" children={<Icon />} />
         </div>
-        <Switch />
+        <div className="doublesContainer">
+          <Switch />
+          <img src={Moon} alt="moon" className="icon" />
+        </div>
       </div>
     </header>
   );

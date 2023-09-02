@@ -1,18 +1,25 @@
 .header {
-  background-color: rgb(36, 46, 79);
+  background-color: #1d3557;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
 }
 .content {
-  width: 50vw;
+  width: 25vw;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 70px;
 }
-.inputContainer {
+.doublesContainer {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
+}
+.icon {
+  height: 32px;
+  width: 32px;
+  margin-left: 5px;
 }

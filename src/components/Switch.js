@@ -11,7 +11,7 @@ function Switch() {
       style={
         isToggled
           ? { backgroundColor: "rgb(98, 206, 179)" }
-          : { backgroundColor: "rgb(66, 87, 127)" }
+          : { backgroundColor: "#457b9d" }
       }
     >
       <span

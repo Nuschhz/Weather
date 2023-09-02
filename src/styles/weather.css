@@ -2,8 +2,8 @@
 
 .container {
   font-family: "Ubuntu", sans-serif;
-  background-color: rgb(44, 65, 101);
-  width: 100%;
+  background-color: rgb(30, 30, 30);
+  width: 100vw;
   height: calc(100vh - 70px);
   color: white;
   display: flex;
