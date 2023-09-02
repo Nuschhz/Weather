@@ -35,24 +35,12 @@ function Card({
       </div>
       <div className="info">{temperature}°C</div>
       <div className="bottomContainer">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <div className="info">{humidity}%</div>
-          <div
-            style={{
-              width: "100px",
-              height: "4px",
-              backgroundColor: "gray",
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
+        <div className="humidity">
+          <div className="infoContainer">
+            <div className="info">Humidade</div>
+            <div className="info">{humidity}%</div>
+          </div>
+          <div className="humidityPercentage">
             <div
               style={{
                 width: `${humidity}px`,

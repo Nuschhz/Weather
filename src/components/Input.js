@@ -1,14 +1,12 @@
-import { useState } from "react";
-
 function Input({
   placeholder = "Placeholder",
   className = "",
   updateText = () => {},
+  textValue = "",
+  setTextValue = () => {},
 }) {
-  const [textvalue, setValue] = useState();
-
   const handleOnChange = (e) => {
-    setValue(e.target.value);
+    setTextValue(e.target.value);
   };
 
   const onEnter = (e) => {
@@ -20,7 +18,7 @@ function Input({
   return (
     <input
       placeholder={placeholder}
-      value={textvalue}
+      value={textValue}
       onChange={(e) => handleOnChange(e)}
       onKeyDown={(e) => onEnter(e)}
       className={className}

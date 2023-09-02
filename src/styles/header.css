@@ -12,7 +12,15 @@
   justify-content: space-between;
   height: 70px;
 }
-.doublesContainer {
+.inputContainer {
+  background-color: #457b9d;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.switchContainer {
   display: flex;
   justify-content: center;
   align-items: center;

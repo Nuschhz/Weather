@@ -12,7 +12,9 @@ function Weather({ city = "", unit = "metric" }) {
   return (
     <div>
       <div className="container">
-        {data === undefined ? null : (
+        {data === undefined ? (
+          <h1>Procure por qualquer cidade</h1>
+        ) : (
           <Card
             temperature={data.data.main.temp}
             humidity={data.data.main.humidity}
