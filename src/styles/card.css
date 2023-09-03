@@ -32,19 +32,6 @@
   font-weight: 400;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
 }
-.humidity {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.humidityPercentage {
-  display: flex;
-  align-items: center;
-  background-color: gray;
-  width: 100px;
-  height: 4px;
-}
 .image {
   height: 245px;
   width: 245px;

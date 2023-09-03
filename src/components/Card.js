@@ -4,6 +4,7 @@ import Cloud from "../images/cloud.png";
 import Drizzle from "../images/drizzle.png";
 // Rain
 // Snow
+import Humidity from "./Humidity";
 
 function Card({
   temperature = 0,
@@ -21,6 +22,8 @@ function Card({
     image = Cloud;
   } else if (image === "Drizzle") {
     image = Drizzle;
+  } else if (image === "Rain") {
+    image = Drizzle;
   } else {
     image = "Not Found";
   }
@@ -35,21 +38,7 @@ function Card({
       </div>
       <div className="info">{temperature}°C</div>
       <div className="bottomContainer">
-        <div className="humidity">
-          <div className="infoContainer">
-            <div className="info">Humidade</div>
-            <div className="info">{humidity}%</div>
-          </div>
-          <div className="humidityPercentage">
-            <div
-              style={{
-                width: `${humidity}px`,
-                height: "4px",
-                backgroundColor: "blue",
-              }}
-            ></div>
-          </div>
-        </div>
+        <Humidity humidity={humidity} />
         <div className="info">{windSpeed}Km/h</div>
       </div>
     </div>
