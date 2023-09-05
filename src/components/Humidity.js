@@ -4,14 +4,14 @@ import "../styles/humidity.css";
 function Humidity({ humidity = 0 }) {
   return (
     <div className="humidityContainer">
-      <div className="humidityInfoContainer">
+      <div className="humidityIconContainer">
         <img
           src={HumidityIcon}
           alt={"Umidade"}
           style={{ height: "32px", width: "32px" }}
         />
       </div>
-      <div>
+      <div className="humidityInfoContainer">
         <div className="humidityInfo">{humidity.toFixed(2)}%</div>
         <div className="humidityPercentage">
           <div

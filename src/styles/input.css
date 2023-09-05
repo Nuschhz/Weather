@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
-.input {
+.input-light {
   font-family: "Roboto Slab", serif;
   font-size: 1em;
-  background-color: #457b9d;
-  color: var(a);
+  background-color: white;
+  color: gray;
   border: none;
   height: 24px;
   border-top-left-radius: 10px;
@@ -11,9 +11,27 @@
   margin-right: 2px;
   padding: 5px;
 }
-.input:focus {
+.input-dark {
+  font-family: "Roboto Slab", serif;
+  font-size: 1em;
+  background-color: #457b9d;
+  color: white;
+  border: none;
+  height: 24px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-right: 2px;
+  padding: 5px;
+}
+.input-light:focus {
   outline: solid rgba(165, 198, 246, 0.8) 2px;
 }
-.input::placeholder {
-  color: var(a);
+.input-dark:focus {
+  outline: solid rgba(165, 198, 246, 0.8) 2px;
+}
+.input-light::placeholder {
+  color: gray;
+}
+.input-dark::placeholder {
+  color: white;
 }

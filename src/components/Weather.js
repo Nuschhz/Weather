@@ -11,21 +11,21 @@ function Weather({ city = "", unit = "metric" }) {
   const [data] = useGetWeather(city, unit);
   const { theme } = useContext(ThemeContext);
 
+  const backgroundStyle =
+    theme === "dark"
+      ? { backgroundColor: "#1D1D1D" }
+      : { backgroundColor: "#ADE8F4" };
+
   return (
     <div>
-      <div
-        className="container"
-        style={
-          theme === "dark"
-            ? { backgroundColor: "rgb(30, 30, 30)" }
-            : { backgroundColor: "#ADE8F4" }
-        }
-      >
+      <div className="container" style={backgroundStyle}>
         {data === null ? (
           <h1>Busque por uma cidade</h1>
         ) : (
           <Card
-            temperature={data.data.main.temp}
+            mainTemp={data.data.main.temp}
+            minTemp={data.data.main.temp_min}
+            maxTemp={data.data.main.temp_max}
             humidity={data.data.main.humidity}
             windSpeed={data.data.wind.speed}
             cityName={data.data.name}

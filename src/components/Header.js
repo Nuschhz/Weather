@@ -10,8 +10,8 @@ import Input from "./Input";
 import Switch from "./Switch";
 
 import { IconSearch } from "@tabler/icons-react";
-import { useContext, useState } from "react";
 
+import { useContext, useState } from "react";
 import { ThemeContext } from "../hooks/useThemeContext";
 
 function Header({ updateText = () => {} }) {
@@ -23,45 +23,41 @@ function Header({ updateText = () => {} }) {
       <IconSearch color={theme === "dark" ? "white" : "gray"} stroke={2} />
     );
   };
+  const headerTheme =
+    theme === "dark"
+      ? { backgroundColor: "#1d3557" }
+      : { backgroundColor: "#0096c7" };
+
+  const inputContainerTheme =
+    theme === "dark"
+      ? {
+          backgroundColor: "#457b9d",
+        }
+      : {
+          backgroundColor: "white",
+        };
+  const buttonTheme =
+    theme === "dark"
+      ? {
+          backgroundColor: "#457b9d",
+          color: "white",
+          placeholder: "white",
+        }
+      : {
+          backgroundColor: "white",
+          color: "black",
+          placeholder: "black",
+        };
+  const iconSelector = theme === "dark" ? Moon : Sun;
+  const altSelector = theme === "dark" ? "Moon" : "Sun";
 
   return (
-    <header
-      className="header"
-      style={
-        theme === "dark"
-          ? { backgroundColor: "#1d3557" }
-          : { backgroundColor: "#0096c7" }
-      }
-    >
+    <header className="header" style={headerTheme}>
       <div className="content">
-        <div
-          className="inputContainer"
-          style={
-            theme === "dark"
-              ? {
-                  backgroundColor: "#457b9d",
-                }
-              : {
-                  backgroundColor: "white",
-                }
-          }
-        >
+        <div className="inputContainer" style={inputContainerTheme}>
           <Input
             placeholder="Busque uma cidade..."
-            className="input"
-            style={
-              theme === "dark"
-                ? {
-                    backgroundColor: "#457b9d",
-                    color: "white",
-                    placeholder: "white",
-                  }
-                : {
-                    backgroundColor: "white",
-                    color: "black",
-                    placeholder: "black",
-                  }
-            }
+            className={`input-${theme}`}
             updateText={updateText}
             textValue={textValue}
             setTextValue={setTextValue}
@@ -70,28 +66,12 @@ function Header({ updateText = () => {} }) {
             className="button"
             children={<Icon />}
             onClick={() => updateText(textValue)}
-            style={
-              theme === "dark"
-                ? {
-                    backgroundColor: "#457b9d",
-                    color: "white",
-                    placeholder: "white",
-                  }
-                : {
-                    backgroundColor: "white",
-                    color: "black",
-                    placeholder: "black",
-                  }
-            }
+            style={buttonTheme}
           />
         </div>
         <div className="switchContainer">
           <Switch />
-          <img
-            src={theme === "dark" ? Moon : Sun}
-            alt={theme === "dark" ? "Moon" : "Sun"}
-            className="icon"
-          />
+          <img src={iconSelector} alt={altSelector} className="icon" />
         </div>
       </div>
     </header>

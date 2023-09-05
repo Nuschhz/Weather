@@ -9,7 +9,10 @@ function Switch() {
   const [isToggled, setIsToggled] = useState(false);
 
   const { theme, setTheme } = useContext(ThemeContext);
-
+  const backgroundStyle = isToggled
+    ? { backgroundColor: "#2EC4B6" }
+    : { backgroundColor: "#ADE8F4" };
+  const toggler = isToggled ? { marginLeft: "30px" } : { marginLeft: "0px" };
   return (
     <div
       className="switch"
@@ -17,16 +20,9 @@ function Switch() {
         setIsToggled(!isToggled);
         setTheme(theme === "dark" ? "light" : "dark");
       }}
-      style={
-        isToggled
-          ? { backgroundColor: "rgb(98, 206, 179)" }
-          : { backgroundColor: "#ADE8F4" }
-      }
+      style={backgroundStyle}
     >
-      <span
-        className="toggler"
-        style={isToggled ? { marginLeft: "30px" } : { marginLeft: "0px" }}
-      />
+      <span className="toggler" style={toggler} />
     </div>
   );
 }

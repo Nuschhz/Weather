@@ -8,9 +8,10 @@ import Humidity from "./Humidity";
 
 import { useContext } from "react";
 import { ThemeContext } from "../hooks/useThemeContext";
+import Temperature from "./Temperature";
 
 function Card({
-  temperature = 0,
+  mainTemp = 0,
   maxTemp = 0,
   minTemp = 0,
   humidity = 0,
@@ -32,26 +33,23 @@ function Card({
   }
   const { theme } = useContext(ThemeContext);
 
+  const cardTheme =
+    theme === "dark"
+      ? {
+          backgroundColor: "rgba(55, 55, 55, 0.8)",
+        }
+      : {
+          backgroundColor: "rgb(175,70,10)",
+        };
   return (
-    <div
-      className="card"
-      style={
-        theme === "dark"
-          ? {
-              backgroundColor: "rgba(55, 55, 55, 0.8)",
-            }
-          : {
-              backgroundColor: "rgb(175,70,10)",
-            }
-      }
-    >
+    <div className="card" style={cardTheme}>
       <div className="title">
         {cityName} - {country}
       </div>
       <div>
         <img src={image} alt="Clear Skyes" className="image" />
       </div>
-      <div className="info">{temperature}°C</div>
+      <Temperature mainTemp={mainTemp} minTemp={minTemp} maxTemp={maxTemp} />
       <div className="bottomContainer">
         <Humidity humidity={humidity} />
         <div className="info">{windSpeed}Km/h</div>
