@@ -4,6 +4,7 @@ function Input({
   updateText = () => {},
   textValue = "",
   setTextValue = () => {},
+  style = {},
 }) {
   const handleOnChange = (e) => {
     setTextValue(e.target.value);
@@ -22,6 +23,7 @@ function Input({
       onChange={(e) => handleOnChange(e)}
       onKeyDown={(e) => onEnter(e)}
       className={className}
+      style={style}
     />
   );
 }

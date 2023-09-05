@@ -6,6 +6,9 @@ import Drizzle from "../images/drizzle.png";
 // Snow
 import Humidity from "./Humidity";
 
+import { useContext } from "react";
+import { ThemeContext } from "../hooks/useThemeContext";
+
 function Card({
   temperature = 0,
   maxTemp = 0,
@@ -27,9 +30,21 @@ function Card({
   } else {
     image = "Not Found";
   }
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <div className="card">
+    <div
+      className="card"
+      style={
+        theme === "dark"
+          ? {
+              backgroundColor: "rgba(55, 55, 55, 0.8)",
+            }
+          : {
+              backgroundColor: "rgb(175,70,10)",
+            }
+      }
+    >
       <div className="title">
         {cityName} - {country}
       </div>

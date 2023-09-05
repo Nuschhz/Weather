@@ -3,7 +3,7 @@
   font-family: "Roboto Slab", serif;
   font-size: 1em;
   background-color: #457b9d;
-  color: white;
+  color: var(a);
   border: none;
   height: 24px;
   border-top-left-radius: 10px;
@@ -15,5 +15,5 @@
   outline: solid rgba(165, 198, 246, 0.8) 2px;
 }
 .input::placeholder {
-  color: white;
+  color: var(a);
 }

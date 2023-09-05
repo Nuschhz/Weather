@@ -16,10 +16,10 @@ function Humidity({ humidity = 0 }) {
         <div className="humidityPercentage">
           <div
             style={{
-              width: `${humidity * 0.6}px`,
+              width: `${humidity * 0.8}px`,
               height: "6px",
               backgroundColor: "rgb(37,100,230)",
-              borderRadius: "3px",
+              borderRadius: "2px",
             }}
           />
         </div>
