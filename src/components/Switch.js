@@ -2,9 +2,6 @@ import "../styles/switch.css";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../hooks/useThemeContext";
 
-//0096c7 header
-//ade8f4 switcher
-
 function Switch() {
   const [isToggled, setIsToggled] = useState(false);
 

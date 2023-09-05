@@ -3,7 +3,7 @@ import "../styles/input.css";
 import "../styles/button.css";
 
 import Moon from "../images/moon.png";
-import Sun from "../images/Clear.png";
+import Sun from "../images/clear.png";
 
 import Button from "./Button";
 import Input from "./Input";
