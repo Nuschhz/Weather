@@ -14,7 +14,7 @@ function Weather({ city = "", unit = "metric" }) {
   const backgroundStyle =
     theme === "dark"
       ? { backgroundColor: "#1D1D1D" }
-      : { backgroundColor: "#F7A9A8" };
+      : { backgroundColor: "#D2B48C" };
 
   return (
     <div>
