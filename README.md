@@ -5,7 +5,7 @@ and **React Hooks**.
 
 ## Live Demo
 
-Coming soon
+<https://Nuschhz.github.io/Weather>
 
 ## Built With
 
