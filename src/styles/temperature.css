@@ -1,0 +1,29 @@
+.temperatureContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+  height: 60px;
+}
+.mainTemp {
+  font-size: 1.25em;
+  border-left: solid purple 3px;
+  padding-left: 5px;
+}
+.secTemp {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+  height: 100%;
+  font-size: 1em;
+}
+.minTemp {
+  border-left: solid lightblue 3px;
+  padding-left: 5px;
+}
+.maxTemp {
+  border-left: solid red 3px;
+  padding-left: 5px;
+}

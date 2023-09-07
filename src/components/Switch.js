@@ -8,7 +8,7 @@ function Switch() {
   const { theme, setTheme } = useContext(ThemeContext);
   const backgroundStyle = isToggled
     ? { backgroundColor: "#2EC4B6" }
-    : { backgroundColor: "#ADE8F4" };
+    : { backgroundColor: "#A280A9" };
   const toggler = isToggled ? { marginLeft: "30px" } : { marginLeft: "0px" };
   return (
     <div

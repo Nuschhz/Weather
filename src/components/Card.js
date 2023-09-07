@@ -49,7 +49,7 @@ function Card({
           backgroundColor: "rgba(55, 55, 55, 0.8)",
         }
       : {
-          backgroundColor: "rgb(175,70,10)",
+          backgroundColor: "#89608E",
         };
   return (
     <div className="card" style={cardTheme}>

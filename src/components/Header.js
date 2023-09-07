@@ -26,7 +26,7 @@ function Header({ updateText = () => {} }) {
   const headerTheme =
     theme === "dark"
       ? { backgroundColor: "#1d3557" }
-      : { backgroundColor: "#0096c7" };
+      : { backgroundColor: "#7E4386" };
 
   const inputContainerTheme =
     theme === "dark"
