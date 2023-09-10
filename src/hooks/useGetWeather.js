@@ -9,7 +9,7 @@ export const useGetWeather = (place = "", units = "") => {
     axios
       .get(url)
       .then((res) => setData(res))
-      .catch((err) => null);
+      .catch((err) => console.log(err));
   }, [place, units]);
   return [data];
 };

@@ -2,8 +2,9 @@ import "../styles/card.css";
 import Clear from "../images/clear.png";
 import Cloud from "../images/cloud.png";
 import Drizzle from "../images/drizzle.png";
-// Rain
-// Snow
+import Rain from "../images/rain.png";
+import Snow from "../images/snow.png";
+
 import Humidity from "./Humidity";
 import Temperature from "./Temperature";
 import WindSpeed from "./Wind";
@@ -20,29 +21,33 @@ function Card({
   cityName = "Santos",
   country = "BR",
   image = "Clear",
+  imageAlt = "",
 }) {
   switch (image) {
     case "Clear":
       image = Clear;
+      imageAlt = "Céus Limpos";
       break;
     case "Clouds":
       image = Cloud;
+      imageAlt = "Nublado";
       break;
     case "Drizzle":
       image = Drizzle;
+      imageAlt = "Chuvisco";
       break;
     case "Rain":
-      //image = Rain;
+      image = Rain;
+      imageAlt = "Chuva";
       break;
     case "Snow":
-      //image = Snow;
+      image = Snow;
+      imageAlt = "Neve";
       break;
     default:
       break;
   }
-  console.log(image);
   const { theme } = useContext(ThemeContext);
-
   const cardTheme =
     theme === "dark"
       ? {
@@ -57,7 +62,7 @@ function Card({
         {cityName} - {country}
       </div>
       <div>
-        <img src={image} alt="Clear Skyes" className="image" />
+        <img src={image} alt={imageAlt} className="image" />
       </div>
       <Temperature mainTemp={mainTemp} minTemp={minTemp} maxTemp={maxTemp} />
       <div className="bottomContainer">
