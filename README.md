@@ -12,3 +12,7 @@ and **React Hooks**.
 - Javascript
 - ReactJS
 - Css
+
+### API
+
+OpenWeather: <https://openweathermap.org>
